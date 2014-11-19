@@ -28,7 +28,7 @@ public class JPAMainService {
 	}
 
 	public void findDepartmentByName() {
-		List<Department> departments = departmentService.find("Prj");
+		List<Department> departments = departmentService.find("PRE-SALES");
 		for(Department department : departments) {
 			System.out.println(department);
 		}
