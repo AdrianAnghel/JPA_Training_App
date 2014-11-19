@@ -34,6 +34,7 @@ INSERT INTO department VALUES (3,"IT");
 INSERT INTO department VALUES (4,"MANAGEMENT");
 INSERT INTO department VALUES (5,"DEVELOPMENT");
 INSERT INTO department VALUES (6,"TESTING");
+INSERT INTO department VALUES (7,"SUPPORT");
 
 INSERT INTO employee VALUES (1,"Adrian",23,6,"Sos Pantelimon","Bucharest","Romania","021602",27/08/1992);
 INSERT INTO employee VALUES (2,"Lavinia",43,3,"Mihai Bravu","Bucharest","USA","029902",27/05/1989);
