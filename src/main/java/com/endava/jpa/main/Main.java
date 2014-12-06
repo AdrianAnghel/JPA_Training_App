@@ -17,9 +17,8 @@ public class Main {
 		 */
 		jpaMainService.findDepartment();
 		jpaMainService.findDepartmentByName();
-
-		/*
-		jpaMainService.insertDepartment();
+        jpaMainService.insertDepartment();
+        /*
 		jpaMainService.updateDepartment();
 		jpaMainService.deleteDepartment();
 		jpaMainService.insertEmployee();

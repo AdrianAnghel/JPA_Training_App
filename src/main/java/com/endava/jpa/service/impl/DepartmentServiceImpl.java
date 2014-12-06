@@ -30,6 +30,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	@Transactional
 	public void save(Department toBeSaved) {
 		// To be implemented
+        departmentDao.save(toBeSaved);
 	}
 
 	@Override

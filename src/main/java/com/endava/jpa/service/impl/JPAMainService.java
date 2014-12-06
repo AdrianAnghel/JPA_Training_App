@@ -36,7 +36,13 @@ public class JPAMainService {
 	/**
 	 *   Define a new department entity and insert it into the corresponding table
 	 */
-	 public void insertDepartment() {}
+	 public void insertDepartment() {
+         Department newDepartment = new Department();
+         newDepartment.setId(7);
+         newDepartment.setName("SECURITY");
+         departmentService.save(newDepartment);
+         System.out.println("New department inserted!");
+     }
 
 	 /**
 	 * Search for an existing department, update its name and save it using the new name

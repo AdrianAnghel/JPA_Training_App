@@ -30,6 +30,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 	@Override
 	public void save(Department toBeSaved) {
 		// To be implemented
+        entityManager.persist(toBeSaved);
 	}
 
 	@Override
