@@ -38,8 +38,8 @@ public class JPAMainService {
 	 */
 	 public void insertDepartment() {
          Department newDepartment = new Department();
-         newDepartment.setId(7);
-         newDepartment.setName("SECURITY");
+         newDepartment.setId(8);
+         newDepartment.setName("APP-SECURITY");
          departmentService.save(newDepartment);
          System.out.println("New department inserted!");
      }
@@ -47,12 +47,23 @@ public class JPAMainService {
 	 /**
 	 * Search for an existing department, update its name and save it using the new name
 	 */
-	public void updateDepartment() {}
+	public void updateDepartment() {
+        Department newDepartment = new Department();
+        newDepartment.setId(2);
+        newDepartment.setName("PRE-SALES");
+        departmentService.update(newDepartment);
+    }
 
 	/**
 	 * Delete an existing department from the database
 	 */
-	public void deleteDepartment() {}
+	public void deleteDepartment() {
+        Department newDepartment = new Department();
+        newDepartment.setId(8);
+        newDepartment.setName("APP-SECURITY");
+        departmentService.remove(newDepartment);
+
+    }
 
 	//-------------------------------------- Employee -----------------------------/
 	/**

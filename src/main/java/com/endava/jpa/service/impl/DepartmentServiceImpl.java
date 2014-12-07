@@ -37,11 +37,13 @@ public class DepartmentServiceImpl implements DepartmentService {
 	@Transactional
 	public void update(Department toBeUpdated) {
 		// To be implemented
+        departmentDao.update(toBeUpdated);
 	}
 
 	@Override
 	@Transactional
 	public void remove(Department toBeRemoved) {
 		// To be implemented
+        departmentDao.remove(toBeRemoved);
 	}
 }

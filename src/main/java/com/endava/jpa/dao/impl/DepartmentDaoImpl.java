@@ -15,7 +15,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 	private EntityManager entityManager;
 
 	private String QUERY_FIND_DEPARTMENT_BY_NAME = "Select d from Department d where d.name = :dep_name";
-
+    private String QUERY_UPDATE_DEPARTMENT = "Update Department set :dep_column = :new_value";
 	@Override
 	public Department find(int id) {
 		return entityManager.find(Department.class, id);
@@ -35,11 +35,15 @@ public class DepartmentDaoImpl implements DepartmentDao {
 
 	@Override
 	public void update(Department toBeUpdated) {
-		// To be implemented
+        int id=toBeUpdated.getId();
+        Department dept = entityManager.find(Department.class,id);
+        dept.setName("PRE-SALES(B2B)");
 	}
 
 	@Override
 	public void remove(Department toBeRemoved) {
-		// To be implemented
+        int id = toBeRemoved.getId();
+        Department dept = entityManager.find(Department.class,id);
+        entityManager.remove(dept);
 	}
 }
