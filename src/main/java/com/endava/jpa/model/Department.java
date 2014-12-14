@@ -1,8 +1,9 @@
 package com.endava.jpa.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "department")
@@ -12,6 +13,10 @@ public class Department {
 	private int id;
 
 	private String name;
+
+
+    @OneToMany(targetEntity = Employee.class,mappedBy="department")
+    private Collection<Employee> employees;//= new ArrayList<Employee>();
 
 	public int getId() {
 		return id;
@@ -28,6 +33,15 @@ public class Department {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+    public Collection<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Collection<Employee> employees) {
+        this.employees = employees;
+    }
+
 
 	@Override
 	public String toString() {

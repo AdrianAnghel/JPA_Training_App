@@ -20,11 +20,12 @@ public class Main {
         //jpaMainService.insertDepartment();
 
         jpaMainService.updateDepartment();
-        jpaMainService.deleteDepartment();
+        //jpaMainService.deleteDepartment();
+
+        jpaMainService.insertEmployee();
+        jpaMainService.getEmployeesFromBucharest();
         /*
 
-		jpaMainService.insertEmployee();
-		jpaMainService.getEmployeesFromBucharest();
 		jpaMainService.giveSalaryRaise();
 		jpaMainService.removeEmployee();
 		*/

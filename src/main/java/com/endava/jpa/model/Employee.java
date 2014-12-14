@@ -1,8 +1,6 @@
 package com.endava.jpa.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -13,16 +11,20 @@ import java.util.Date;
 @Table(name="employee")
 public class Employee {
 
+
+    @ManyToOne
+    @JoinColumn(name="dept_id")
+    Department department;
+
     @Id
     private int id;
     private String name;
     private Long salary;
-    private int dept_id;
     private String street;
     private String city;
     private String state;
     private String zip_code;
-    private Date birthday;
+    private String birthday;
 
     public int getId(){
         return id;
@@ -48,12 +50,12 @@ public class Employee {
         this.salary=salary;
     }
 
-    public int getDept_id(){
-        return dept_id;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDept_id(int dept_id){
-        this.dept_id=dept_id;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public String getStreet(){
@@ -86,11 +88,11 @@ public class Employee {
         this.zip_code=zip_code;
     }
 
-    public Date getBirthday(){
+    public String getBirthday(){
         return birthday;
     }
 
-    public void setBirthday(Date birthday){
+    public void setBirthday(String birthday){
         this.birthday=birthday;
     }
 
@@ -99,7 +101,7 @@ public class Employee {
                 "id = " + id +
                 ", name = " + name +
                 ", salary = " + salary +
-                ", dept_id = " + dept_id +
+                ", dept_id = " + department.getId() +
                 ", street = " + street +
                 ", city = " + city +
                 ", state = " + state +
