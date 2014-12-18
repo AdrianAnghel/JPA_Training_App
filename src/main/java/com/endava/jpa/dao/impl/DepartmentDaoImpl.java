@@ -37,7 +37,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 	public void update(Department toBeUpdated) {
         int id=toBeUpdated.getId();
         Department dept = entityManager.find(Department.class,id);
-        dept.setName("PRE-SALES(B2B)");
+        dept.setName(toBeUpdated.getName());
 	}
 
 	@Override
@@ -46,4 +46,5 @@ public class DepartmentDaoImpl implements DepartmentDao {
         Department dept = entityManager.find(Department.class,id);
         entityManager.remove(dept);
 	}
+
 }
