@@ -26,6 +26,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public void save(Employee employee){
         em.persist(employee);
+        em.flush();
     }
 
 
